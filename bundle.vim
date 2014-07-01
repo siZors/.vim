@@ -20,7 +20,6 @@
 
     " Browse the vim undo tree
     NeoBundleLazy 'sjl/gundo.vim', { 'autoload' : {'commands': 'GundoToggle'}}
-    nnoremap <leader>z :GundoToggle<CR>
 
     " Browse file structure with Nerd Tree
     NeoBundle 'scrooloose/nerdtree'
@@ -32,11 +31,9 @@
     \'\.lo$', '\.\~lock.*#$', '\mo$', '\.o$', '\,pt.cache$',
     \'\.pyc$', '\.pyo$', '__pycache__$', '\.Python$', '\..*.rej$',
     \'\.rej$', '\.ropeproject$', '\.svn$', '\.tags$' ]
-    nnoremap <silent> <leader>t :NERDTreeToggle<CR>
 
     " Show objects in current file in window when coding in object orented language
     NeoBundle "majutsushi/tagbar"
-    nnoremap <leader>i :TagbarToggle<CR>
 
     " Awesome status bar
     NeoBundle 'bling/vim-airline'
@@ -65,13 +62,20 @@
     let g:pymode_run = 1
     let g:pymode_run_bind = '<leader>r'
     let g:pymode_lint_checkers = ['pylint', 'pep8', 'pep257', 'pyflakes', 'mccabe']
-    let pymode_lint_unmodified = 1
+    let g:pymode_lint = 1
+    let g:pymode_lint_unmodified = 1
+    let g:pymode_lint_on_fly= 1
+    let g:pymode_lint_cwindow = 0
+    let g:pymode_rope = 1
     let g:pymode_rope_lookup_project = 0
     let g:pymode_rope_completion = 1
+    let g:pymode_rope_regenerate_on_write = 1
     let g:pymode_rope_complete_on_dot = 1
     let g:pymode_rope_completion_bind = '<C-Space>'
     let g:pymode_syntax = 1
     let g:pymode_syntax_slow_sync = 1
+    let g:pymode_syntax_all = 1
+    let g:pymode_trim_whitespaces = 1
 
     " Matlab
     NeoBundle "vim-scripts/matlab.vim"

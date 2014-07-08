@@ -28,19 +28,27 @@
     call neobundle#rc($HOME . '/.vim/bundle')
     filetype plugin indent on
 
-    syntax on
+    set t_Co=256
+    if &t_Co >= 256 || has("gui_running")
+        colorscheme jellybeans
+    endif
 
-    " Set default colorscheme
-    colorscheme jellybeans
+    if &t_Co > 2 || has("gui_running")
+        syntax on
+    endif
 
 " Options
     set title                         " show file name in window title
     set hidden                        " Edit multiple unsaved files at the same time
     set confirm                       " Prompt to save unsaved changes when exiting
     set viminfo='1000,f1,<500,:100,/100,h
-    set history=500
+    set history=1000                  " Remember more commands and search history
+    set undolevels=1000               " Use many muchos levels of undo
     set ssop-=blank                   " Don't save blank window
     set ssop-=options                 " Don't save options
+    set hlsearch                      " Highlight search terms
+    set ignorecase                    " Ignore case when searching
+    set smartcase                     " Ignore case if search pattern is lowercase, case-sensitive otherwise
 
 " Display Options
     set title
@@ -92,9 +100,6 @@
     set undoreload=10000      " Maximum number of lines to save for undo on buffer reload
 
 " Misc
-    set t_Co=256                      " Set 256 color mode
-    let mapleader = "-"
-    let maplocalleader = "\\"
     set clipboard+=unnamed            " Enable x-clipboard
 
 " Keymap file
@@ -103,3 +108,7 @@
 " Bundle file
     source $HOME/.vim/bundle.vim
 
+" Autocommands
+if has('autocmd')
+    "Put autocommands here
+endif

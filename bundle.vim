@@ -32,6 +32,9 @@
     \'\.pyc$', '\.pyo$', '__pycache__$', '\.Python$', '\..*.rej$',
     \'\.rej$', '\.ropeproject$', '\.svn$', '\.tags$' ]
 
+    " Command-T, better than NERDTree!
+    NeoBundle 'wincent/Command-T'
+
     " Show objects in current file in window when coding in object orented language
     NeoBundle "majutsushi/tagbar"
 
@@ -61,10 +64,11 @@
     let g:pymode_folding = 1
     let g:pymode_run = 1
     let g:pymode_run_bind = '<leader>r'
-    let g:pymode_lint_checkers = ['pylint', 'pep8', 'pep257', 'pyflakes', 'mccabe']
+    " Removed pyflakes and pep257 for speed. Can add back if desired.
+    let g:pymode_lint_checkers = ['pylint', 'pep8', 'mccabe', 'pyflakes']
     let g:pymode_lint = 1
     let g:pymode_lint_unmodified = 1
-    let g:pymode_lint_on_fly= 1
+    let g:pymode_lint_on_fly = 0
     let g:pymode_lint_cwindow = 0
     let g:pymode_rope = 1
     let g:pymode_rope_lookup_project = 0

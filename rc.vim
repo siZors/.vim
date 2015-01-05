@@ -21,13 +21,13 @@
     endif
 
     " Setup NeoBundle
-    filetype off
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-    let g:neobundle#types#get#clone_depth = 2
-    call neobundle#begin(expand('~/.vim/bundle/'))
+    " filetype off
+    " set runtimepath+=~/.vim/bundle/neobundle.vim/
+    " let g:neobundle#types#get#clone_depth = 2
+    " call neobundle#begin(expand('~/.vim/bundle/'))
     " Bundle file
     "    source $HOME/.vim/bundle.vim
-    call neobundle#end()
+    " call neobundle#end()
 
     filetype plugin indent on
 

@@ -25,7 +25,10 @@
     set runtimepath+=~/.vim/bundle/neobundle.vim/
     let g:neobundle#types#get#clone_depth = 2
     call neobundle#begin(expand('~/.vim/bundle/'))
-    call neobundle#rc($HOME . '/.vim/bundle')
+    " Bundle file
+    "    source $HOME/.vim/bundle.vim
+    call neobundle#end()
+
     filetype plugin indent on
 
     set t_Co=256

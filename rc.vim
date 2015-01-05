@@ -106,7 +106,7 @@
     source $HOME/.vim/map.vim
 
 " Bundle file
-    source $HOME/.vim/bundle.vim
+"    source $HOME/.vim/bundle.vim
 
 " Autocommands
 if has('autocmd')
